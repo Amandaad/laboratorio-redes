@@ -1,0 +1,13 @@
+# Capturas de tráfego: não publicar no repositório
+*.pcap
+*.pcapng
+capturas/
+
+# Logs e arquivos locais
+*.log
+.env
+.env.*
+!.env.example
+
+# Arquivos temporários
+.DS_Store
