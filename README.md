@@ -28,6 +28,22 @@ sudo apt update
 sudo apt install tcpdump dnsutils netcat-openbsd curl -y
 ```
 
+## Executar os testes automaticamente
+
+O script `scripts/testar-rede.sh` executa verificações básicas de DNS, TCP na porta 443, HTTP e HTTPS.
+
+```bash
+bash scripts/testar-rede.sh
+```
+
+Para testar outro domínio:
+
+```bash
+bash scripts/testar-rede.sh example.org
+```
+
+O script exige `dig`, `nc` e `curl`. Os resultados variam conforme a conectividade, as políticas de rede e a disponibilidade do destino.
+
 ## Exercícios
 
 ### 1. Consultar DNS
@@ -99,6 +115,8 @@ Gere uma consulta DNS durante esse intervalo em outro terminal. Em ambientes WSL
 laboratorio-redes/
 ├── README.md
 ├── .gitignore
+├── scripts/
+│   └── testar-rede.sh
 └── capturas/        # arquivos locais, não enviados ao Git
 ```
 
